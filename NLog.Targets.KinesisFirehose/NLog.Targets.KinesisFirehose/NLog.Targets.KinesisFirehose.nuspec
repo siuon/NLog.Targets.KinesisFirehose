@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>NLog.Targets.KinesisFirehose</id>
+        <version>1.0.1</version>
+        <authors>siuon</authors>
+        <owners>siuon</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>NLog target for aws kinesis firehose.</description>
+        <releaseNotes>
+            Add NLog and Newtonsoft.Json dependencies.
+        </releaseNotes>
+        <readme>README.md</readme>
+        <license type="expression">MIT</license>
+
+        <dependencies>
+            <group targetFramework=".NETFramework4.6.1">
+                <dependency id="AWSSDK.Core" version="3.7.303.4" />
+                <dependency id="AWSSDK.KinesisFirehose" version="3.7.304.12" />
+                <dependency id="Newtonsoft.Json" version="13.0.3" />
+                <dependency id="NLog" version="4.7.9" />
+            </group>
+        </dependencies>
+    </metadata>
+
+    <files>
+        <file src="bin\Release\net461\*.dll" target="lib\net461" />
+        <file src="bin\Release\net461\README.md" target="README.md" />
+    </files>
+</package>
