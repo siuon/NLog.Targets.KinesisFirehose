@@ -15,7 +15,9 @@ sample nlog.config
       internalLogFile="internal-log.log"
       >
 
-    <add assembly="KinesisFirehose" />
+    <extensions>
+        <add assembly="NLog.Targets.KinesisFirehose" />
+    </extensions>
     
     <targets async="true">
         <target name="myKinesisFirehoseTarget"
@@ -27,6 +29,7 @@ sample nlog.config
             <field name="MyFiled2" layout="${message}" />
         </target>
     </targets>
+
     <rules>
         <logger name="*" minlevel="Trace" writeTo="myKinesisFirehoseTarget" />
     </rules>
