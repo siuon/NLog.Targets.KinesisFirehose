@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
         <id>NLog.Targets.KinesisFirehose</id>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
         <authors>siuon</authors>
         <owners>siuon</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>NLog target for aws kinesis firehose.</description>
         <releaseNotes>
-            Add NLog and Newtonsoft.Json dependencies.
+            Edit README.
         </releaseNotes>
         <readme>README.md</readme>
         <license type="expression">MIT</license>
