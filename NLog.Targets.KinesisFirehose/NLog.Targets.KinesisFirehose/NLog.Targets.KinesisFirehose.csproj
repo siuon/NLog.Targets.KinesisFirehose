@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net461</TargetFrameworks>
+        <TargetFrameworks>net461;net6.0</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
@@ -10,11 +10,18 @@
         </None>
     </ItemGroup>
 
-    <ItemGroup>
-        <PackageReference Include="AWSSDK.Core" Version="3.7.303.4" />
-        <PackageReference Include="AWSSDK.KinesisFirehose" Version="3.7.304.12" />
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-        <PackageReference Include="NLog" Version="4.7.9" />
-    </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="AWSSDK.Core" Version="3.7.303.4" />
+		<PackageReference Include="AWSSDK.KinesisFirehose" Version="3.7.304.12" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="NLog" Version="4.7.9" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFrameworks)'=='net6.0'">
+
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFrameworks)'=='net461'">
+
+	</ItemGroup>
 
 </Project>
